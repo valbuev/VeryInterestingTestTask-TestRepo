@@ -22,6 +22,9 @@
 		A344D3D21932D391007C6D72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A344D3B11932D391007C6D72 /* UIKit.framework */; };
 		A344D3DA1932D391007C6D72 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A344D3D81932D391007C6D72 /* InfoPlist.strings */; };
 		A344D3DC1932D391007C6D72 /* VeryInterestingTestTaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A344D3DB1932D391007C6D72 /* VeryInterestingTestTaskTests.m */; };
+		A344D3E61932D3F7007C6D72 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A344D3E51932D3F7007C6D72 /* CoreData.framework */; };
+		A344D3E91932D69A007C6D72 /* PlacesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A344D3E71932D69A007C6D72 /* PlacesModel.xcdatamodeld */; };
+		A344D3EB1932DF44007C6D72 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A344D3EA1932DF44007C6D72 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		A344D3D71932D391007C6D72 /* VeryInterestingTestTaskTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VeryInterestingTestTaskTests-Info.plist"; sourceTree = "<group>"; };
 		A344D3D91932D391007C6D72 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A344D3DB1932D391007C6D72 /* VeryInterestingTestTaskTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VeryInterestingTestTaskTests.m; sourceTree = "<group>"; };
+		A344D3E51932D3F7007C6D72 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A344D3E81932D69A007C6D72 /* PlacesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlacesModel.xcdatamodel; sourceTree = "<group>"; };
+		A344D3EA1932DF44007C6D72 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A344D3E61932D3F7007C6D72 /* CoreData.framework in Frameworks */,
 				A344D3B01932D391007C6D72 /* CoreGraphics.framework in Frameworks */,
 				A344D3B21932D391007C6D72 /* UIKit.framework in Frameworks */,
 				A344D3AE1932D391007C6D72 /* Foundation.framework in Frameworks */,
@@ -103,6 +110,7 @@
 		A344D3AC1932D391007C6D72 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A344D3E51932D3F7007C6D72 /* CoreData.framework */,
 				A344D3AD1932D391007C6D72 /* Foundation.framework */,
 				A344D3AF1932D391007C6D72 /* CoreGraphics.framework */,
 				A344D3B11932D391007C6D72 /* UIKit.framework */,
@@ -133,6 +141,8 @@
 				A344D3B61932D391007C6D72 /* InfoPlist.strings */,
 				A344D3B91932D391007C6D72 /* main.m */,
 				A344D3BB1932D391007C6D72 /* VeryInterestingTestTask-Prefix.pch */,
+				A344D3E71932D69A007C6D72 /* PlacesModel.xcdatamodeld */,
+				A344D3EA1932DF44007C6D72 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -231,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A344D3EB1932DF44007C6D72 /* Localizable.strings in Resources */,
 				A344D3C41932D391007C6D72 /* Main_iPad.storyboard in Resources */,
 				A344D3C91932D391007C6D72 /* Images.xcassets in Resources */,
 				A344D3C11932D391007C6D72 /* Main_iPhone.storyboard in Resources */,
@@ -254,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A344D3C71932D391007C6D72 /* ViewController.m in Sources */,
+				A344D3E91932D69A007C6D72 /* PlacesModel.xcdatamodeld in Sources */,
 				A344D3BE1932D391007C6D72 /* AppDelegate.m in Sources */,
 				A344D3BA1932D391007C6D72 /* main.m in Sources */,
 			);
@@ -393,6 +405,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VeryInterestingTestTask/VeryInterestingTestTask-Prefix.pch";
 				INFOPLIST_FILE = "VeryInterestingTestTask/VeryInterestingTestTask-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -406,6 +419,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VeryInterestingTestTask/VeryInterestingTestTask-Prefix.pch";
 				INFOPLIST_FILE = "VeryInterestingTestTask/VeryInterestingTestTask-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -480,6 +494,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A344D3E71932D69A007C6D72 /* PlacesModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A344D3E81932D69A007C6D72 /* PlacesModel.xcdatamodel */,
+			);
+			currentVersion = A344D3E81932D69A007C6D72 /* PlacesModel.xcdatamodel */;
+			path = PlacesModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A344D3A21932D391007C6D72 /* Project object */;
 }
