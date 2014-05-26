@@ -6,10 +6,14 @@
 //  Copyright (c) 2014 bva. All rights reserved.
 //
 
+#define JSON_DATA_URL @"http://m.saritasa.com/testtask/places.json"
+
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+    
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

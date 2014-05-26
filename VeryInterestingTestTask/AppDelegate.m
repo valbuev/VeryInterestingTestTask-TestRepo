@@ -76,11 +76,29 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
+- (void) getJsonData{
+    NSString *url = [NSString stringWithFormat:JSON_DATA_URL];
+    NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    
+    [NSURLConnection sendAsynchronousRequest:req
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *responce,
+                                               NSData *data,
+                                               NSError *error) {
+                               
+                               NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                               NSLog(@"String from URL %@ is %@", url, str);
+                               
+                           }];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
     return YES;
 }
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
