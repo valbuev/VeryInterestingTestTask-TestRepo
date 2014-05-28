@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3205468193498BD00BBAF5F /* CityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3205467193498BD00BBAF5F /* CityTableViewCell.m */; };
 		A344D3AE1932D391007C6D72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A344D3AD1932D391007C6D72 /* Foundation.framework */; };
 		A344D3B01932D391007C6D72 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A344D3AF1932D391007C6D72 /* CoreGraphics.framework */; };
 		A344D3B21932D391007C6D72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A344D3B11932D391007C6D72 /* UIKit.framework */; };
@@ -15,7 +16,6 @@
 		A344D3BE1932D391007C6D72 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A344D3BD1932D391007C6D72 /* AppDelegate.m */; };
 		A344D3C11932D391007C6D72 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A344D3BF1932D391007C6D72 /* Main_iPhone.storyboard */; };
 		A344D3C41932D391007C6D72 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A344D3C21932D391007C6D72 /* Main_iPad.storyboard */; };
-		A344D3C71932D391007C6D72 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A344D3C61932D391007C6D72 /* ViewController.m */; };
 		A344D3C91932D391007C6D72 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A344D3C81932D391007C6D72 /* Images.xcassets */; };
 		A344D3D01932D391007C6D72 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A344D3CF1932D391007C6D72 /* XCTest.framework */; };
 		A344D3D11932D391007C6D72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A344D3AD1932D391007C6D72 /* Foundation.framework */; };
@@ -28,6 +28,7 @@
 		A344D3EF1932F210007C6D72 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = A344D3EE1932F210007C6D72 /* City.m */; };
 		A344D3F21932F222007C6D72 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = A344D3F11932F222007C6D72 /* Place.m */; };
 		A344D3F51932F230007C6D72 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = A344D3F41932F230007C6D72 /* Photo.m */; };
+		A3953EEC193437C400FB70C8 /* PlacesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3953EEB193437C400FB70C8 /* PlacesListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A3205466193498BD00BBAF5F /* CityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTableViewCell.h; sourceTree = "<group>"; };
+		A3205467193498BD00BBAF5F /* CityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTableViewCell.m; sourceTree = "<group>"; };
 		A344D3AA1932D391007C6D72 /* VeryInterestingTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeryInterestingTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A344D3AD1932D391007C6D72 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A344D3AF1932D391007C6D72 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,8 +56,6 @@
 		A344D3BD1932D391007C6D72 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A344D3C01932D391007C6D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		A344D3C31932D391007C6D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		A344D3C51932D391007C6D72 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A344D3C61932D391007C6D72 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A344D3C81932D391007C6D72 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A344D3CE1932D391007C6D72 /* VeryInterestingTestTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeryInterestingTestTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A344D3CF1932D391007C6D72 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -70,6 +71,8 @@
 		A344D3F11932F222007C6D72 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Place.m; path = Entities/Place.m; sourceTree = "<group>"; };
 		A344D3F31932F230007C6D72 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = Entities/Photo.h; sourceTree = "<group>"; };
 		A344D3F41932F230007C6D72 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = Entities/Photo.m; sourceTree = "<group>"; };
+		A3953EEA193437C400FB70C8 /* PlacesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesListViewController.h; sourceTree = "<group>"; };
+		A3953EEB193437C400FB70C8 /* PlacesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,10 +139,12 @@
 				A344D3BD1932D391007C6D72 /* AppDelegate.m */,
 				A344D3BF1932D391007C6D72 /* Main_iPhone.storyboard */,
 				A344D3C21932D391007C6D72 /* Main_iPad.storyboard */,
-				A344D3C51932D391007C6D72 /* ViewController.h */,
-				A344D3C61932D391007C6D72 /* ViewController.m */,
 				A344D3C81932D391007C6D72 /* Images.xcassets */,
 				A344D3B41932D391007C6D72 /* Supporting Files */,
+				A3953EEA193437C400FB70C8 /* PlacesListViewController.h */,
+				A3953EEB193437C400FB70C8 /* PlacesListViewController.m */,
+				A3205466193498BD00BBAF5F /* CityTableViewCell.h */,
+				A3205467193498BD00BBAF5F /* CityTableViewCell.m */,
 			);
 			path = VeryInterestingTestTask;
 			sourceTree = "<group>";
@@ -289,10 +294,11 @@
 			files = (
 				A344D3F51932F230007C6D72 /* Photo.m in Sources */,
 				A344D3EF1932F210007C6D72 /* City.m in Sources */,
-				A344D3C71932D391007C6D72 /* ViewController.m in Sources */,
+				A3205468193498BD00BBAF5F /* CityTableViewCell.m in Sources */,
 				A344D3E91932D69A007C6D72 /* PlacesModel.xcdatamodeld in Sources */,
 				A344D3F21932F222007C6D72 /* Place.m in Sources */,
 				A344D3BE1932D391007C6D72 /* AppDelegate.m in Sources */,
+				A3953EEC193437C400FB70C8 /* PlacesListViewController.m in Sources */,
 				A344D3BA1932D391007C6D72 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +516,7 @@
 				A344D3E11932D391007C6D72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A344D3E21932D391007C6D72 /* Build configuration list for PBXNativeTarget "VeryInterestingTestTaskTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +525,7 @@
 				A344D3E41932D391007C6D72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

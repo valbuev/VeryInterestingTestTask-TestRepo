@@ -7,6 +7,8 @@
 //
 
 #define JSON_DATA_URL @"http://m.saritasa.com/testtask/places.json"
+#define USER_DEFAULTS__JSON_DATA_URL_HAD_BEEN_DOWNLOADED @"yes"
+#define USER_DEFAULTS__IS_JSON_DATA_URL_HAD_BEEN_DOWNLOADED__KEY @"yes"
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
