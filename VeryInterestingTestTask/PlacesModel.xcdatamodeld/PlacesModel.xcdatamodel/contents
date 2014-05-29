@@ -10,7 +10,7 @@
         <relationship name="cities" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="City" inverseName="first_letter" inverseEntity="City" syncable="YES"/>
     </entity>
     <entity name="Photo" syncable="YES">
-        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="place" maxCount="1" deletionRule="Nullify" destinationEntity="Place" inverseName="photos" inverseEntity="Place" syncable="YES"/>
     </entity>
@@ -18,13 +18,13 @@
         <attribute name="latitude" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longtitude" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="text" attributeType="String" syncable="YES"/>
-        <relationship name="city" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="City" inverseName="places" inverseEntity="City" syncable="YES"/>
+        <relationship name="city" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="City" inverseName="places" inverseEntity="City" syncable="YES"/>
         <relationship name="photos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Photo" inverseName="place" inverseEntity="Photo" syncable="YES"/>
     </entity>
     <elements>
         <element name="City" positionX="-92" positionY="-10" width="128" height="88"/>
-        <element name="Photo" positionX="-666" positionY="-7" width="128" height="88"/>
-        <element name="Place" positionX="-324" positionY="-37" width="144" height="120"/>
         <element name="CityFirstLetter" positionX="-459" positionY="9" width="128" height="73"/>
+        <element name="Photo" positionX="-666" positionY="-7" width="128" height="88"/>
+        <element name="Place" positionX="-324" positionY="-37" width="144" height="118"/>
     </elements>
 </model>

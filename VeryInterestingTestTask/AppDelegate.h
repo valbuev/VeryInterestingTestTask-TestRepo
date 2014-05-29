@@ -9,12 +9,15 @@
 #define JSON_DATA_URL @"http://m.saritasa.com/testtask/places.json"
 #define USER_DEFAULTS__JSON_DATA_URL_HAD_BEEN_DOWNLOADED @"yes"
 #define USER_DEFAULTS__IS_JSON_DATA_URL_HAD_BEEN_DOWNLOADED__KEY @"yes"
+#define NO_CITY_NAME @"No city"
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "PhotoDownloader.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>{
-    
+@interface AppDelegate : UIResponder <UIApplicationDelegate, PhotoDownloaderDelegate>{
+    @private int networkIndicatorCounter; // networkIndicatorCounter is used for counting how much
+                                        // objects set indicator visible
 }
 
 @property (strong, nonatomic) UIWindow *window;
@@ -25,5 +28,7 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+
+-(void) downloadPhoto: (NSString*) url forPhotoManagedObject: (NSManagedObject*)object;
 
 @end

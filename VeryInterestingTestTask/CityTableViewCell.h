@@ -10,7 +10,4 @@
 
 @interface CityTableViewCell : UITableViewCell
 
-@property (nonatomic,retain) IBOutlet UILabel* CityNameLabel;
-@property (nonatomic,retain) IBOutlet UILabel* CityNameLabel2;
-
 @end

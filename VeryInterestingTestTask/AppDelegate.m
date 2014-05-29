@@ -20,6 +20,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    networkIndicatorCounter = 0;
+    
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     PlacesListViewController *controller = (PlacesListViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
@@ -93,9 +96,14 @@
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
     
     if(managedObjectContext != nil) {
-        if([managedObjectContext hasChanges] && ![managedObjectContext save:&error]){
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
+        @try {
+            if([managedObjectContext hasChanges] && ![managedObjectContext save:&error]){
+                NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+                abort();
+            }
+        }
+        @catch (NSException *exception) {
+            NSLog(@"Fail when managedObjContext was saving:\n %@",exception);
         }
     }
 }
@@ -159,7 +167,8 @@
                  forKey:USER_DEFAULTS__IS_JSON_DATA_URL_HAD_BEEN_DOWNLOADED__KEY];
             }
         }
-        [self performFetchForPlacesListViewController];
+        //[self performFetchForPlacesListViewController];
+        //[self printIntoLog];
     });
 }
 
@@ -180,11 +189,13 @@
 }
 
 - (NSManagedObject *) saveCity: (NSObject *) nameObj{
+    NSString *name;
     if(nameObj == [NSNull null] || nameObj == nil)
-        return nil;
-    NSString *name = (NSString *) nameObj;
+        name = NO_CITY_NAME;
+    else
+        name = (NSString *) nameObj;
     if([name isEqualToString:@"<null>"])
-        return nil;
+        name = NO_CITY_NAME;
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *city_entity = [NSEntityDescription entityForName:@"City"
                                                    inManagedObjectContext:self.managedObjectContext];
@@ -293,6 +304,41 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void) setNetworkIndicatorVisible: (Boolean) visible{
+    if(visible){
+        networkIndicatorCounter++;
+        if(networkIndicatorCounter == 1){
+            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+        }
+    }
+    else{
+        networkIndicatorCounter--;
+        if(networkIndicatorCounter < 1){
+            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        }
+    }
+}
+
+-(void) downloadPhoto: (NSString*) url forPhotoManagedObject: (NSManagedObject*)object{
+    //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        PhotoDownloader *downloader = [[PhotoDownloader alloc] init];
+        downloader.delegate = self;
+        [downloader startDownloadFromURL:url withManagedObject:object];
+    //});
+}
+
+-(void) PhotoDownloaderDidFinishedDownload: (NSString *) filePath forObject:(NSObject *) object{
+    if(!object)
+        return;
+    NSManagedObject * photo = (NSManagedObject* )object;
+    [photo setValue:filePath forKey:@"image"];
+    [photo setValue:nil forKey:@"url"];
+    NSManagedObject * place = [photo valueForKey:@"place"];
+    [place willChangeValueForKey:@"text"];
+    [place didChangeValueForKey:@"text"];
+    [self saveContext];
 }
 
 @end

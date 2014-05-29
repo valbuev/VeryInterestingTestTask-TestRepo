@@ -28,7 +28,10 @@
 		A344D3EF1932F210007C6D72 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = A344D3EE1932F210007C6D72 /* City.m */; };
 		A344D3F21932F222007C6D72 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = A344D3F11932F222007C6D72 /* Place.m */; };
 		A344D3F51932F230007C6D72 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = A344D3F41932F230007C6D72 /* Photo.m */; };
+		A34683F51935D4CA00E9DC2B /* PhotoDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = A34683F41935D4CA00E9DC2B /* PhotoDownloader.m */; };
+		A34683F71936D14100E9DC2B /* question_mark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A34683F61936D14100E9DC2B /* question_mark.jpg */; };
 		A3953EEC193437C400FB70C8 /* PlacesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3953EEB193437C400FB70C8 /* PlacesListViewController.m */; };
+		A3AF13F119357533004C02E0 /* FetchedResultController_Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AF13F019357533004C02E0 /* FetchedResultController_Helper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +74,13 @@
 		A344D3F11932F222007C6D72 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Place.m; path = Entities/Place.m; sourceTree = "<group>"; };
 		A344D3F31932F230007C6D72 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = Entities/Photo.h; sourceTree = "<group>"; };
 		A344D3F41932F230007C6D72 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = Entities/Photo.m; sourceTree = "<group>"; };
+		A34683F31935D4CA00E9DC2B /* PhotoDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDownloader.h; sourceTree = "<group>"; };
+		A34683F41935D4CA00E9DC2B /* PhotoDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDownloader.m; sourceTree = "<group>"; };
+		A34683F61936D14100E9DC2B /* question_mark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = question_mark.jpg; sourceTree = "<group>"; };
 		A3953EEA193437C400FB70C8 /* PlacesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesListViewController.h; sourceTree = "<group>"; };
 		A3953EEB193437C400FB70C8 /* PlacesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesListViewController.m; sourceTree = "<group>"; };
+		A3AF13EF19357533004C02E0 /* FetchedResultController_Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchedResultController_Helper.h; sourceTree = "<group>"; };
+		A3AF13F019357533004C02E0 /* FetchedResultController_Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchedResultController_Helper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +145,8 @@
 				A344D3EC1932F1D8007C6D72 /* Entities */,
 				A344D3BC1932D391007C6D72 /* AppDelegate.h */,
 				A344D3BD1932D391007C6D72 /* AppDelegate.m */,
+				A34683F31935D4CA00E9DC2B /* PhotoDownloader.h */,
+				A34683F41935D4CA00E9DC2B /* PhotoDownloader.m */,
 				A344D3BF1932D391007C6D72 /* Main_iPhone.storyboard */,
 				A344D3C21932D391007C6D72 /* Main_iPad.storyboard */,
 				A344D3C81932D391007C6D72 /* Images.xcassets */,
@@ -145,6 +155,8 @@
 				A3953EEB193437C400FB70C8 /* PlacesListViewController.m */,
 				A3205466193498BD00BBAF5F /* CityTableViewCell.h */,
 				A3205467193498BD00BBAF5F /* CityTableViewCell.m */,
+				A3AF13EF19357533004C02E0 /* FetchedResultController_Helper.h */,
+				A3AF13F019357533004C02E0 /* FetchedResultController_Helper.m */,
 			);
 			path = VeryInterestingTestTask;
 			sourceTree = "<group>";
@@ -152,6 +164,7 @@
 		A344D3B41932D391007C6D72 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A34683F61936D14100E9DC2B /* question_mark.jpg */,
 				A344D3B51932D391007C6D72 /* VeryInterestingTestTask-Info.plist */,
 				A344D3B61932D391007C6D72 /* InfoPlist.strings */,
 				A344D3B91932D391007C6D72 /* main.m */,
@@ -269,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A34683F71936D14100E9DC2B /* question_mark.jpg in Resources */,
 				A344D3EB1932DF44007C6D72 /* Localizable.strings in Resources */,
 				A344D3C41932D391007C6D72 /* Main_iPad.storyboard in Resources */,
 				A344D3C91932D391007C6D72 /* Images.xcassets in Resources */,
@@ -292,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3AF13F119357533004C02E0 /* FetchedResultController_Helper.m in Sources */,
 				A344D3F51932F230007C6D72 /* Photo.m in Sources */,
 				A344D3EF1932F210007C6D72 /* City.m in Sources */,
 				A3205468193498BD00BBAF5F /* CityTableViewCell.m in Sources */,
@@ -300,6 +315,7 @@
 				A344D3BE1932D391007C6D72 /* AppDelegate.m in Sources */,
 				A3953EEC193437C400FB70C8 /* PlacesListViewController.m in Sources */,
 				A344D3BA1932D391007C6D72 /* main.m in Sources */,
+				A34683F51935D4CA00E9DC2B /* PhotoDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
